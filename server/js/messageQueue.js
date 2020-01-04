@@ -1,4 +1,8 @@
+const keypress = require('./keypressHandler');
+
 const messages = []; // the storage unit for messages
+
+keypress.initialize((message) => {this.enqueue(message)});
 
 module.exports.enqueue = (message) => {
   console.log(`Enqueing message: ${message}`);
